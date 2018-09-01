@@ -1,2 +1,2 @@
 # processing
-Este repositorio guarda algunos sketches de ejemplo.
+Este repositorio guarda algunos sketches de ejemplo para fomentar el uso y aprendizaje de processing.
