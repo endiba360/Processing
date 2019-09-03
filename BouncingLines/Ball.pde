@@ -26,8 +26,8 @@ class Ball
     XmiddlePosition = tempXm;
     YmiddlePosition = tempYm;
     
-    XmiddlePosition = tempXf;
-    YmiddlePosition = tempYf;
+    XfinalPosition = tempXf;
+    YfinalPosition = tempYf;
   }
   
   void move()
