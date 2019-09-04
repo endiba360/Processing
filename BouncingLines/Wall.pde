@@ -38,23 +38,22 @@ class Wall
       }
     }
   }
-  void moveUp()
+  void moveLeft()
   {
     float easing = 0.05;
-    float targetY = -50;
-    float startY = Yposition;
-    float stopY = targetY;
-
-    if (mouseY <= targetY)
+    float targetX = width-50;
+    float startX = Xposition;
+    float stopX = targetX;
+    if (mouseX >= targetX)
     {
-      Yposition = startY + ((stopY - startY) * easing);
-    } else if (mouseY != targetY)
+      Xposition = startX + ((stopX - startX) * easing);
+    } else if (mouseX != targetX)
     {
       easing = 0.1;
-      Yposition -= (targetY - Yposition) * easing;
-      if (Yposition < 0)
+      Xposition -= (targetX - Xposition) * easing;
+      if (Xposition > width-widthWall)
       {
-        Yposition = 0;
+        Xposition = width-widthWall;
       }
     }
   }

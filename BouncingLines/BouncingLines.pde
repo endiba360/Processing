@@ -23,6 +23,7 @@ void draw()
   wallUp.moveDown();
   
   wallDown.display();
-  wallDown.moveUp();
-  //wallRight.display();
+  
+  wallRight.display();
+  wallRight.moveLeft();
 }
