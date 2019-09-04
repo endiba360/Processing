@@ -17,9 +17,9 @@ void setup()
 void draw()
 {
   background(255);
-  ball.display();
-  ball.move();
-  //wallUp.display();
+  //ball.display();
+  //ball.move();
+  wallUp.display();
   //wallDown.display();
   //wallRight.display();
 }
