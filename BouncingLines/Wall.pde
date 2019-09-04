@@ -44,6 +44,7 @@ class Wall
     float targetX = width-50;
     float startX = Xposition;
     float stopX = targetX;
+
     if (mouseX >= targetX)
     {
       Xposition = startX + ((stopX - startX) * easing);
@@ -53,7 +54,27 @@ class Wall
       Xposition -= (targetX - Xposition) * easing;
       if (Xposition > width-widthWall)
       {
-        Xposition = width-widthWall;
+        Xposition = width - widthWall;
+      }
+    }
+  }
+  void moveUp()
+  {
+    float easing = 0.05;
+    float targetY = height - 50;
+    float startY = Yposition;
+    float stopY = targetY;
+
+    if (mouseY >= targetY)
+    {
+      Yposition = startY + ((stopY - startY) * easing);
+    } else if (mouseY != targetY) 
+    {
+      easing = 0.1;
+      Yposition -= (targetY - Yposition) * easing;
+      if (Yposition > height - heightWall) 
+      {
+        Yposition = height - heightWall;
       }
     }
   }
