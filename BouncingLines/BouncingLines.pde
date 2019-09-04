@@ -19,10 +19,10 @@ void draw()
   background(255);
   //ball.display();
   //ball.move();
-  //wallUp.display();
-  //wallUp.moveDown();
+  wallUp.display();
+  wallUp.moveDown();
   wallDown.display();
   wallDown.moveUp();
-  //wallRight.display();
-  //wallRight.moveLeft();
+  wallRight.display();
+  wallRight.moveLeft();
 }
