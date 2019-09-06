@@ -4,6 +4,15 @@ class Wall
   float Yposition;
   float widthWall;
   float heightWall;
+  //
+  float easing;
+  float targetY;
+  float targetX;
+  float startY;
+  float startX;
+  float stopY;
+  float stopX;
+  //
 
   Wall(float tempX, float tempY, float tempWidth, float tempHeight)
   {
@@ -20,10 +29,10 @@ class Wall
   }
   void moveDown()
   {
-    float easing = 0.05;
-    float targetY = 50;
-    float startY = Yposition;
-    float stopY = targetY;
+    easing = 0.05;
+    targetY = 50;
+    startY = Yposition;
+    stopY = targetY;
 
     if (mouseY <= targetY)
     {
@@ -40,10 +49,10 @@ class Wall
   }
   void moveLeft()
   {
-    float easing = 0.05;
-    float targetX = width-50;
-    float startX = Xposition;
-    float stopX = targetX;
+    easing = 0.05;
+    targetX = width-50;
+    startX = Xposition;
+    stopX = targetX;
 
     if (mouseX >= targetX)
     {
@@ -60,10 +69,10 @@ class Wall
   }
   void moveUp()
   {
-    float easing = 0.05;
-    float targetY = height - 50;
-    float startY = Yposition;
-    float stopY = targetY;
+    easing = 0.05;
+    targetY = height - 50;
+    startY = Yposition;
+    stopY = targetY;
 
     if (mouseY >= targetY)
     {

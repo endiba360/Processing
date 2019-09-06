@@ -2,7 +2,8 @@ Ball ball;
 Wall wallUp;
 Wall wallDown;
 Wall wallRight;
-
+//
+//
 void setup()
 {
   size(480, 340);
@@ -17,8 +18,10 @@ void setup()
 void draw()
 {
   background(255);
-  //ball.display();
-  //ball.move();
+
+  ball.display();
+  ball.move();
+
   wallUp.display();
   wallUp.moveDown();
   wallDown.display();

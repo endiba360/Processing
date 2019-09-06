@@ -97,8 +97,4 @@ class Ball
     line(XmiddlePosition, YmiddlePosition, XfinalPosition, YfinalPosition);
   }
   
-  void bounce()
-  {
-    
-  }
 }
