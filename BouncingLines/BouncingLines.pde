@@ -3,6 +3,7 @@ Wall wallUp;
 Wall wallDown;
 Wall wallRight;
 cuboflotante Cubo;
+Contador contador;
 //
 //
 void setup()
@@ -15,6 +16,7 @@ void setup()
   wallDown = new Wall(60, height - 15, width - 80, 15);
   wallRight = new Wall(width - 15, 20, 15, height - 40);
   Cubo = new cuboflotante(width/2, height/2, 25, 25);
+  contador = new Contador(0, -1, 50, height+1);
 }
 
 void draw()
@@ -24,14 +26,16 @@ void draw()
   //ball.display();
   //ball.move();
 
-  //wallUp.display();
-  //wallUp.moveDown();
-  //wallDown.display();
-  //wallDown.moveUp();
-  //wallRight.display();
-  //wallRight.moveLeft();
+  wallUp.display();
+  wallUp.moveDown();
+  wallDown.display();
+  wallDown.moveUp();
+  wallRight.display();
+  wallRight.moveLeft();
   
   Cubo.display();
   Cubo.move();
   Cubo.bounce();
+  
+  contador.display();
 }
