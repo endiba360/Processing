@@ -1,4 +1,4 @@
-class Wall
+public class Wall
 {
   float Xposition;
   float Yposition;
@@ -36,9 +36,11 @@ class Wall
 
     if (mouseY <= targetY)
     {
+
       Yposition = startY + ((stopY - startY) * easing);
     } else if (mouseY != targetY)
     {
+
       easing = 0.1;
       Yposition -= (targetY - Yposition) * easing;
       if (Yposition < 0)

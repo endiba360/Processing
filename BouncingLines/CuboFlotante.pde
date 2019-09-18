@@ -1,4 +1,4 @@
-class cuboflotante
+public class cuboflotante
 {
   float Xpos;
   float Ypos;
@@ -13,6 +13,17 @@ class cuboflotante
     Ypos = tempY;
     widthCubo = tempWidth;
     heightCubo = tempHeight;
+  }
+
+  void checkIfHits()
+  {
+    if(ball.XfinalPosition > Xpos && 
+       ball.XfinalPosition < Xpos + widthCubo && 
+       ball.YfinalPosition > Ypos && 
+       ball.YfinalPosition < Ypos + heightCubo)
+     {
+       contador.hitInCube = contador.hitInWall + 1;
+     }else{contador.hitInCube = 0;};
   }
 
   void display()
