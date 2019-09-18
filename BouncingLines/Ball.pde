@@ -39,9 +39,11 @@ public class Ball
       YfinalPosition < wallDown.Yposition + wallDown.heightWall)
     {
       Xfdirection *= -1;
+      
     } else if (XfinalPosition < 0 || XfinalPosition > width || XfinalPosition < contador.contadorWidth)
     {
       Xfdirection *= -1;
+      
     }
 
     if (XfinalPosition > wallDown.Xposition &&
@@ -50,9 +52,13 @@ public class Ball
       YfinalPosition + Yfdirection < wallDown.Yposition + wallDown.heightWall)
     {
       Yfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     } else if (YfinalPosition < 0 || YfinalPosition > height)
     {
       Yfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     }
     //middle Point
     if (XmiddlePosition + Xmdirection > wallDown.Xposition && 
@@ -109,9 +115,13 @@ public class Ball
       YfinalPosition < wallRight.Yposition + wallRight.heightWall)
     {
       Xfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     } else if (XfinalPosition < 0 || XfinalPosition > width || XfinalPosition < contador.contadorWidth)
     {
       Xfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     }
 
     if (XfinalPosition > wallRight.Xposition &&
@@ -120,9 +130,11 @@ public class Ball
       YfinalPosition + Yfdirection < wallRight.Yposition + wallRight.heightWall)
     {
       Yfdirection *= -1;
+      
     } else if (YfinalPosition < 0 || YfinalPosition > height)
     {
       Yfdirection *= -1;
+      
     }
     //middle Point
     if (XmiddlePosition + Xmdirection > wallRight.Xposition && 
@@ -179,9 +191,11 @@ public class Ball
       YfinalPosition < wallUp.Yposition + wallUp.heightWall)
     {
       Xfdirection *= -1;
+      
     } else if (XfinalPosition < 0 || XfinalPosition > width || XfinalPosition < contador.contadorWidth)
     {
       Xfdirection *= -1;
+      
     }
 
     if (XfinalPosition > wallUp.Xposition &&
@@ -190,9 +204,13 @@ public class Ball
       YfinalPosition + Yfdirection < wallUp.Yposition + wallUp.heightWall)
     {
       Yfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     } else if (YfinalPosition < 0 || YfinalPosition > height)
     {
       Yfdirection *= -1;
+      contador.hitInWall = contador.hitInWall + 1;
+      
     }
     //middle Point
     if (XmiddlePosition + Xmdirection > wallUp.Xposition && 

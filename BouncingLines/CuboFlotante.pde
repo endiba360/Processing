@@ -6,6 +6,7 @@ public class cuboflotante
   float heightCubo;
   float speed = 1;
   float direction = 1;
+  
 
   cuboflotante(float tempX, float tempY, float tempWidth, float tempHeight)
   {
@@ -17,18 +18,18 @@ public class cuboflotante
 
   void checkIfHits()
   {
-    if(ball.XfinalPosition > Xpos && 
-       ball.XfinalPosition < Xpos + widthCubo && 
-       ball.YfinalPosition > Ypos && 
-       ball.YfinalPosition < Ypos + heightCubo)
-     {
-       contador.hitInCube = contador.hitInWall + 1;
-     }else{contador.hitInCube = 0;};
+    if (ball.XfinalPosition > Xpos && 
+        ball.XfinalPosition < Xpos + widthCubo && 
+        ball.YfinalPosition > Ypos && 
+        ball.YfinalPosition < Ypos + heightCubo)
+    {
+      contador.hitInCube = contador.hitInCube + 1;
+    }
+
   }
 
   void display()
   {
-    fill(0);
     rect(Xpos, Ypos, widthCubo, heightCubo);
   }
 
