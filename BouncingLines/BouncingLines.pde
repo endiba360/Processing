@@ -23,7 +23,6 @@ void draw()
 {
   background(255);
   
-  strokeWeight(3);
   ball.display();
   ball.move();
   //ball.bounce(); no longer used
@@ -31,27 +30,22 @@ void draw()
   ball.checkIfHitRightWall();
   ball.checkIfHitUpWall();
   
-  strokeWeight(0);
   wallUp.display();
   wallUp.moveDown();
   
 
-  strokeWeight(0);
   wallDown.display();
   wallDown.moveUp();
   
 
-  strokeWeight(0);
   wallRight.display();
   wallRight.moveLeft();
   
 
-  strokeWeight(0);
   Cubo.display();
   Cubo.move();
   Cubo.bounce();
   Cubo.checkIfHits();
 
-  strokeWeight(0);
   contador.display();
 }
