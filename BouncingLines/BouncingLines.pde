@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile file;
+
 Ball ball;
 Wall wallUp;
 Wall wallDown;
@@ -17,6 +20,8 @@ void setup()
   wallRight = new Wall(width - 15, 20, 15, height - 40);
   Cubo = new cuboflotante(width/2, height/2, 30, 30);
   contador = new Contador(0, -1, 55, height+1);
+  
+  file = new SoundFile(this, "Retro_8-Bit_Game-Pickup_Object_Item_Coin_01");
 }
 
 void draw()
@@ -25,7 +30,6 @@ void draw()
   
   ball.display();
   ball.move();
-  //ball.bounce(); no longer used
   ball.checkIfHitDownWall();
   ball.checkIfHitRightWall();
   ball.checkIfHitUpWall();

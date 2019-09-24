@@ -39,7 +39,7 @@ public class Ball
       YfinalPosition < wallDown.Yposition + wallDown.heightWall)
     {
       Xfdirection *= -1;
-      
+      file.play();
     } else if (XfinalPosition < 0 || XfinalPosition > width || XfinalPosition < contador.contadorWidth)
     {
       Xfdirection *= -1;
